@@ -1,0 +1,6 @@
+NUMBER OF NAMES REDACTED IN EACH FILE/projects/redactor/data/trainfiles/pos/57_10.txtþ0
+/projects/redactor/data/trainfiles/pos/840_9.txtþ3
+/projects/redactor/data/trainfiles/pos/305_8.txtþ14
+/projects/redactor/data/trainfiles/pos/741_7.txtþ7
+/projects/redactor/data/trainfiles/pos/750_8.txtþ39
+NUMBER OF GENDER REFERENCES REDACTED IN EACH FILENUMBER OF PHONE NUMBERS REDACTED IN EACH FILENUMBER OF DATE RELATED REDACTIONS IN EACH FILENUMBER OF ADDRESSE RELATED REDACTIONS IN EACH FILE
