@@ -1,7 +1,7 @@
-# redactor
+# <center>Redactor</center>
 Created a command line script that can redact names, dates places, concepts, addresses and phone numbers (Created Mar-Apr 2018).
 
-#======================================Project 1: Redactor and Unredactor=========================================#
+## Redactor and Unredactor
 FILE Organization:
 
 redactor/
@@ -43,7 +43,7 @@ For unredactor: comment LINE 24 and uncomment LINE 25.
 
 For redactor: comment LINE 24 and uncomment LINE 23.
 
-#-------------------redactor.py-----------------------#
+#---------redactor.py------------#
 The redactor will take in the text files given in a specific directory and output in the specified output directory. Any of the following flags can be used to redact the required content.
 
 An example of the command line input. The following was used to redact the names from the testfiles to create content for the unredactor.py. 
