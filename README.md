@@ -4,32 +4,32 @@ Created a command line script that can redact names, dates places, concepts, add
 ## Redactor and Unredactor
 FILE Organization:
 
-redactor/
 	redactor/
-		__init__.py
-		redactor.py
-		unredactor.py
-		
-	tests/
-		test_rm_names.py
-		test_rm_phones.py
-		test_rm_genders.py
-		test_rm_addresses.py
-		test_rm_concept.py
-		test_rm_dates.py
-		tets_find_entity.py
-	DATA/
-		retxt/
-		testfiles/
-			pos/
-			neg/
-		trainfiles/
-			pos/
-			neg/
-	README
-	requirements.txt
-	setup.cfg
-	setup.py
+		redactor/
+			__init__.py
+			redactor.py
+			unredactor.py
+
+		tests/
+			test_rm_names.py
+			test_rm_phones.py
+			test_rm_genders.py
+			test_rm_addresses.py
+			test_rm_concept.py
+			test_rm_dates.py
+			tets_find_entity.py
+		DATA/
+			retxt/
+			testfiles/
+				pos/
+				neg/
+			trainfiles/
+				pos/
+				neg/
+		README
+		requirements.txt
+		setup.cfg
+		setup.py
 
 NOTE : 
 -REMOVED DATA file to reduce upload size for Github.
