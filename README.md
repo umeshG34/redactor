@@ -43,7 +43,7 @@ For unredactor: comment LINE 24 and uncomment LINE 25.
 
 For redactor: comment LINE 24 and uncomment LINE 23.
 
-#---------redactor.py------------#
+#### redactor.py
 The redactor will take in the text files given in a specific directory and output in the specified output directory. Any of the following flags can be used to redact the required content.
 
 An example of the command line input. The following was used to redact the names from the testfiles to create content for the unredactor.py. 
@@ -53,21 +53,21 @@ This needs to begiven in the following format when in the directory '/projects/r
 	python3 redactor.py --input "/projects/redactor/data/testfiles/pos/*.txt" --input "/projects/redactor/data/testfile/neg/*.txt" --output "/projects/redactor/data/retxt/" --names
 
 Here removing names and then printing the priting the statistics.
-python3 redactor.py --input "/projects/redactor/data/trainfiles/pos/*.txt" 
-                    --output "/projects/redactor/data/retxt/" 
-                    --names 
-                    --stats stdout
+	python3 redactor.py --input "/projects/redactor/data/trainfiles/pos/*.txt" 
+		    --output "/projects/redactor/data/retxt/" 
+		    --names 
+		    --stats stdout
 
-INPUT:
+#### INPUT:
 The input was done using glob.glob hence we must give the input directory in quotes. otherwise the linux will perform the same action and an error will occur.
 
-OUTPUT:
+#### OUTPUT:
 The output directory also needs to specified in the above manner. We used regex to detect and compare the last two files. If they match then the file name will be "original_filename.redacted.txt" otherwise it will be written to the 
 output file with the original filename.
 
-#------Flags------#
+### <center>Flags</center>
 All flagged/redacted phrases or string chunks are replaced with '█' (U+2588) and any redaction refers to this.
-1) Names: --names:
+##### 1) Names: --names:
 Input- Document or String
 Output- Redacted document or string, list of redacted names for testing
 Functioning:
@@ -83,7 +83,7 @@ Bugs:
 - Names containing hyphens(-) are not being identified as shown in test case example.
 - STANFORD NER was tried but was not successful due to issues with importing .jar files required.
 
-2) Genders: --genders:
+##### 2) Genders: --genders:
 Input- Document or String
 Output- Redacted document or string, list of redacted gender referances for testing.
 Functioning:
@@ -99,7 +99,7 @@ Bugs:
 -Unexpected behaviour due to the regex patterns coinciding with other words.
 -Not completely capturing professional or other words which reveal the gender.
 
-3) Dates: --dates:
+##### 3) Dates: --dates:
 Input- Document or String
 Output- Redacted document or string, list of redacted strings considered dates for testing.
 Functioning:
@@ -112,7 +112,7 @@ Bugs:
 -The dateutil.parser classfies any number also as a date. This has been included in he test case. We tried datefinder but the same is repeated in some cases for datefinder package too. The parser expects all the string inputs to 
 be dates. This approach needs to change.
 
-4) Adresses: --addresses:
+##### 4) Adresses: --addresses:
 Input- Document or String
 Output- Redacted document or string, list of redacted strings considered an address for testing.
 Functioning:
@@ -124,7 +124,7 @@ Bugs:
 -It is not able to identify cities and pin codes in some cases. The usaddress parser by default assumes that all the input is address to be parsed.
 -The address needs to be in a standard format like "14, Board Dr., Norman, OK".
 
-5) Phones: --phones:
+##### 5) Phones: --phones:
 Input- Document or String
 Output- Redacted document or string, list of redacted phone numbers.
 Functioning:
@@ -138,7 +138,7 @@ Functioning:
 Bugs:
 -Any conflicting string patterns not actually phone numbers will also be identified as phone numbers.
 
-6) Concepts: --concept <concept to be redacted>:
+##### 6) Concepts: --concept <concept to be redacted>:
 Input- Document or String, Concept ot be redacted
 Output- Redacted document or string, Number of lines redacted
 Functioning:
@@ -151,7 +151,7 @@ Bugs:
 - synsets work better when they know whether the given word is verb or noun. Due to the lack of this the accuracy of the other sysnsets retreived is bad and sometimes they are compeltely unrelated. Ex: sysnet('eat') finally a lemma 
 "garbage". Another example is that "prison" sysnet does not contain the lemmas "incarcerated" or "jail" in the linked synsets.
 
-7)--stats <argument>:
+##### 7)--stats <argument>:
 -Prints out the name of the file and the number of a type of entity redacted in that file to output_statistics in data/ folder.
 -It takes exactly one command line argument which can be either 'stdout' or 'out'. When stdout is given then the statistics are also printed on the screen. Each type of the above flags are printed one after the another.
 - output_stats.txt is created at the location of the redactor.py. This text file consists of the statistics for each of the file for each flag.
@@ -159,8 +159,8 @@ Bugs:
 Bugs:
 -MUST GIVE either stdout or any other string otherwise will throw an error.
 
-#------------------Unredactor.py---------------------#
--------The unredactor takes the training files and the redacted test files and gives an output file containing the predictions for the redacted names in the test file.-------
+##### Unredactor.py
+The unredactor takes the training files and the redacted test files and gives an output file containing the predictions for the redacted names in the test file.
 The undredactor command expects atleast on input to train the model with.
 
 Command Line Arguments:
