@@ -37,6 +37,6 @@ requests==2.18.1
 SecretStorage==2.3.1
 singledispatch==3.4.0.3
 six==1.11.0
-urllib3==1.21.1
+urllib3==1.26.5
 usaddress==0.5.10
 wrapt==1.10.11
